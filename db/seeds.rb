@@ -7,3 +7,32 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Rails.logger.info "Destroying Database Data"
+
+User.destroy_all
+
+Rails.logger.info "Seeding Database"
+
+User.create({
+  username: "user_1",
+  first_name: "John",
+  last_name: "Regular",
+  password: "pw_1",
+})
+
+User.create({
+  username: "user_2",
+  first_name: "Jeff",
+  last_name: "Cool",
+  password: "pw_2",
+})
+
+User.create({
+  username: "user_3",
+  first_name: "Ellen",
+  last_name: "Lame",
+  password: "pw_3",
+})
+
+Rails.logger.info "Database Seeded"
