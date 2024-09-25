@@ -1,5 +1,5 @@
 class ScoresController < ApplicationController
-  before_action :set_score, only: %i[ show update destroy ]
+  before_action :set_score, only: :show
 
   # GET /scores
   def index
@@ -46,6 +46,7 @@ class ScoresController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def score_params
-      params.require(:score).permit(:score, :time)
+      # byebug
+      params.require(:score).permit(:score, :time, :user_id)
     end
 end
