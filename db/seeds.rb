@@ -20,6 +20,9 @@ user_1 = User.create({
   first_name: "John",
   last_name: "Regular",
   password: "pw_1",
+  email: "1@1.com",
+  games_played: 4,
+  lifetime_score: nil,
 })
 
 user_2 = User.create({
@@ -27,6 +30,9 @@ user_2 = User.create({
   first_name: "Jeff",
   last_name: "Cool",
   password: "pw_2",
+  email: "2@2.com",
+  games_played: 7,
+  lifetime_score: nil,
 })
 
 user_3 = User.create({
@@ -34,24 +40,36 @@ user_3 = User.create({
   first_name: "Ellen",
   last_name: "Lame",
   password: "pw_3",
+  email: "3@4.com",
+  games_played: 9,
+  lifetime_score: nil,
 })
 
 Score.create({
   user_id: user_1.id,
   score: 280,
   time: 400,
+  difficulty: "Hard",
+  category: "History",
+  questions: 25
 })
 
 Score.create({
   user_id: user_2.id,
   score: 340,
   time: 460,
+  difficulty: "Easy",
+  category: "Art",
+  questions: 15
 })
 
 Score.create({
   user_id: user_3.id,
   score: 120,
   time: 780,
+  difficulty: "Medium",
+  category: "Sports",
+  questions: 10
 })
 
 Rails.logger.info "Database Seeded"
