@@ -72,4 +72,22 @@ Score.create({
   questions: 10
 })
 
+Score.create({
+  user_id: user_2.id,
+  score: 540,
+  time: 660,
+  difficulty: "Hard",
+  category: "Politics",
+  questions: 22
+})
+
+Score.create({
+  user_id: user_3.id,
+  score: 520,
+  time: 900,
+  difficulty: "Medium",
+  category: "History",
+  questions: 44
+})
+
 Rails.logger.info "Database Seeded"
