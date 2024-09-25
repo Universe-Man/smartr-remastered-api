@@ -1,5 +1,11 @@
 # README
 
+DONE: API is up and tested for User and Score. Ready for frontend integration
+
+TODO: Need to add Authorization and Validation, understand Routing, setup Testing, and investigate Model files (attr_accessor and initializer)
+
+////////////////////////////////////////////////////////////////////////////
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
